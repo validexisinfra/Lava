@@ -50,7 +50,6 @@ sed -i -e "s|^seeds *=.*|seeds = \"ebacd3e666003397fb685cd44956d33419219950@seed
 peers="159a27880fe8704f44c307b18404061d46b77083@162.19.95.240:15656,0d6aed3038c55387f5b7c8fb1e702545358213ea@65.109.78.246:37656,0d67bedc7f929200d52c8724dfc50f848661f9ba@65.109.69.119:28656,f978474e77246a3635340d3bdb8dc14cb28d5ba0@188.214.129.218:26656,4008607a63c61e23bb74dfa613f93f9d178f5bd8@54.38.12.103:26656,d9bfa29e0cf9c4ce0cc9c26d98e5d97228f93b0b@65.108.233.103:14456,03c935c903ec7620d8e653fd179d5aa927888a09@136.243.55.115:40004,9d6216e9d79dc73247336ea18b928af9c9544e4f@51.210.223.80:19956,91971680907af210c45bf3618046314225a2629f@176.103.222.58:26656"
 sed -i -e "s|^persistent_peers *=.*|persistent_peers = \"$peers\"|" $HOME/.lava/config/config.toml
 sed -i -e "s|^minimum-gas-prices *=.*|minimum-gas-prices = \"0.000000001ulava\"|" $HOME/.lava/config/app.toml
-​​
 sed -i \
 -e 's/timeout_propose = .*/timeout_propose = "1s"/' \
 -e 's/timeout_propose_delta = .*/timeout_propose_delta = "500ms"/' \
